@@ -10,36 +10,36 @@ class Solution:
         ans = []
         m = len(matrix)
         n = len(matrix[0])
-        m_top = 0
-        m_bottom = m - 1
-        n_left = 0
-        n_right = n - 1
+        top = 0
+        bottom = m - 1
+        left = 0
+        right = n - 1
 
         while len(ans) < m*n:
             # 往右
-            for i in range(n_right - n_left + 1):
+            for i in range(right - left + 1):
                 if len(ans) == m*n:
                     break
-                ans.append(matrix[m_top][n_left + i])
+                ans.append(matrix[top][left + i])
             # 往下
-            for i in range(m_bottom - m_top):
+            for i in range(bottom - top):
                 if len(ans) == m*n:
                     break
-                ans.append(matrix[m_top + i + 1][n_right])
+                ans.append(matrix[top + i + 1][right])
             # 往左
-            for i in range(n_right - n_left):
+            for i in range(right - left):
                 if len(ans) == m*n:
                     break
-                ans.append(matrix[m_bottom][n_right - i -1])
+                ans.append(matrix[bottom][right - i -1])
             # 往上
-            for i in range(m_bottom - m_top - 1):
+            for i in range(bottom - top - 1):
                 if len(ans) == m*n:
                     break
-                ans.append(matrix[m_bottom - i - 1][n_left])
-            m_top += 1
-            m_bottom -= 1
-            n_left += 1
-            n_right -= 1
+                ans.append(matrix[bottom - i - 1][left])
+            top += 1
+            bottom -= 1
+            left += 1
+            right -= 1
         return ans
         
 # @lc code=end
