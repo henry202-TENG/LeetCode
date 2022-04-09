@@ -9,10 +9,11 @@ class Solution:
     def getMoneyAmount(self, n: int) -> int:
 
         # Problem:
-        # What is the "worst"? MAX cost
-        # What is the retriction of "worst"? How I guarantee? MIN step
-        # Whenever I choose a number i, the cost grow up,
-        # but go ahead to the target.
+        # Q1: What is the "worst"? 
+        # For a step, whatever I make guess, thing tend to MAXIMUM the cost
+
+        # Q2: What is the retriction of "worst"? How I guarantee? 
+        # I choose the MINIMUM cost for each step.
         # 
         dp1 = [[0 for _ in range(n+1)] for _ in range(n+1)]
 
