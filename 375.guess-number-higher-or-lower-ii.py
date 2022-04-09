@@ -10,7 +10,7 @@ class Solution:
 
         # Problem:
         # What is the "worst"? MAX cost
-        # What is the retriction of "worst"? MIN step
+        # What is the retriction of "worst"? How I guarantee? MIN step
         # Whenever I choose a number i, the cost grow up,
         # but go ahead to the target.
         # 
