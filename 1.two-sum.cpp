@@ -9,8 +9,6 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
         vector<int> res;
-        map<int,int> hash;
-
         for (vector<int>::size_type i = 0; i!=nums.size()-1; i++)
         {
             for (vector<int>::size_type j = i+1; j!=nums.size(); j++)
